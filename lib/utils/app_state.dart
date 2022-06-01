@@ -27,12 +27,11 @@ class AppState extends ChangeNotifier {
         _products.add(product);
       }
     }
-    // print(_products.length);
+    notifyListeners();
   }
 
   void clearData() async {
     _products.clear();
     await checkAndSaveData();
-    notifyListeners();
   }
 }
